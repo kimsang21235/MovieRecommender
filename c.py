@@ -110,7 +110,7 @@ def create_recommendation_table(box_office_data, genre_ratings):
 
 # 메인 함수
 def main():
-    st.title('연령별 영화 추천')
+    st.title('🎬연령별 영화 추천 시스템')
 
     # 사용자 정보 입력
     name = st.text_input('이름을 입력하세요.')
@@ -125,7 +125,7 @@ def main():
             if users_group is not None:
                 genre_ratings = calculate_genre_ratings(users_group, ratings, movies) # 장르별 평점 계산
                 sorted_genre_ratings = genre_ratings.sort_values(ascending=False)   # 정렬
-                st.write(f"🎬 {name} 님의 연령대가 선호하는 영화 장르:")
+                st.write(f"📊 {name} 님의 연령대가 선호하는 영화 장르:")
                 st.bar_chart(sorted_genre_ratings)
                 
                 # 영화 추천 로직 추가
